@@ -1,0 +1,100 @@
+{
+  "name": "CareerRecommendation",
+  "type": "object",
+  "properties": {
+    "career_title": {
+      "type": "string",
+      "description": "Job title or career role"
+    },
+    "match_score": {
+      "type": "number",
+      "description": "Compatibility score (0-100)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Career description"
+    },
+    "required_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Skills needed for this career"
+    },
+    "average_salary": {
+      "type": "object",
+      "properties": {
+        "entry_level": {
+          "type": "number"
+        },
+        "mid_level": {
+          "type": "number"
+        },
+        "senior_level": {
+          "type": "number"
+        }
+      },
+      "description": "Salary ranges in USD"
+    },
+    "job_demand": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "very_high"
+      ],
+      "description": "Current job market demand"
+    },
+    "growth_rate": {
+      "type": "string",
+      "description": "Projected growth rate percentage"
+    },
+    "key_companies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Top companies hiring for this role"
+    },
+    "learning_path": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "skill": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "essential",
+              "important",
+              "nice_to_have"
+            ]
+          },
+          "estimated_time": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Recommended learning path"
+    },
+    "related_roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Similar career paths"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user has favorited this recommendation"
+    }
+  },
+  "required": [
+    "career_title",
+    "match_score"
+  ]
+}

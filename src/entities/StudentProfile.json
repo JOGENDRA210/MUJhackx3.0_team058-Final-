@@ -1,0 +1,117 @@
+{
+  "name": "StudentProfile",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Student's full name"
+    },
+    "education_level": {
+      "type": "string",
+      "enum": [
+        "high_school",
+        "undergraduate",
+        "graduate",
+        "postgraduate"
+      ],
+      "description": "Current education level"
+    },
+    "field_of_study": {
+      "type": "string",
+      "description": "Current or intended field of study"
+    },
+    "gpa": {
+      "type": "number",
+      "description": "Grade Point Average"
+    },
+    "academic_achievements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "description": "Academic achievements and awards"
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "skills_used": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Projects completed"
+    },
+    "interests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Areas of interest"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "proficiency": {
+            "type": "string",
+            "enum": [
+              "beginner",
+              "intermediate",
+              "advanced",
+              "expert"
+            ]
+          }
+        }
+      },
+      "description": "Current skills and proficiency levels"
+    },
+    "preferred_work_style": {
+      "type": "string",
+      "enum": [
+        "remote",
+        "hybrid",
+        "onsite",
+        "flexible"
+      ],
+      "description": "Preferred work environment"
+    },
+    "career_goals": {
+      "type": "string",
+      "description": "Long-term career aspirations"
+    }
+  },
+  "required": [
+    "full_name",
+    "education_level"
+  ]
+}

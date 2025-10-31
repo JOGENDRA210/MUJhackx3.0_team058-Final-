@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "_id": "mhe0he6mr7bjas6",
+      "createdAt": "2025-10-30T22:44:07.822Z",
+      "updatedAt": "2025-10-30T22:44:07.822Z",
+      "assessments": [],
+      "portfolios": [],
+      "name": "jogendra yadav",
+      "email": "jatin2112004yadav@gmail.com",
+      "password": "$2b$10$Acpi.RRCqSPwWdC4qj9aGOjcxzaDuDq8YXkBHXZMyCWle407NuAVa"
+    }
+  ],
+  "assessments": [],
+  "portfolios": []
+}

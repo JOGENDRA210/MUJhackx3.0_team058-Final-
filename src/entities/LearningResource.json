@@ -1,0 +1,74 @@
+{
+  "name": "LearningResource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Course or resource title"
+    },
+    "provider": {
+      "type": "string",
+      "description": "Platform or institution (e.g., Coursera, Udemy, YouTube)"
+    },
+    "skill_covered": {
+      "type": "string",
+      "description": "Primary skill taught"
+    },
+    "difficulty_level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Course difficulty"
+    },
+    "duration": {
+      "type": "string",
+      "description": "Estimated completion time"
+    },
+    "url": {
+      "type": "string",
+      "description": "Link to the resource"
+    },
+    "resource_type": {
+      "type": "string",
+      "enum": [
+        "course",
+        "tutorial",
+        "book",
+        "certification",
+        "workshop",
+        "bootcamp"
+      ],
+      "description": "Type of learning resource"
+    },
+    "cost": {
+      "type": "string",
+      "enum": [
+        "free",
+        "paid",
+        "subscription"
+      ],
+      "description": "Cost structure"
+    },
+    "rating": {
+      "type": "number",
+      "description": "User rating (0-5)"
+    },
+    "is_completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user has completed this resource"
+    },
+    "progress": {
+      "type": "number",
+      "default": 0,
+      "description": "Completion progress percentage"
+    }
+  },
+  "required": [
+    "title",
+    "skill_covered"
+  ]
+}

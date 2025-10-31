@@ -1,0 +1,60 @@
+{
+  "name": "Assessment",
+  "type": "object",
+  "properties": {
+    "assessment_type": {
+      "type": "string",
+      "enum": [
+        "personality",
+        "aptitude",
+        "skills",
+        "interests"
+      ],
+      "description": "Type of assessment"
+    },
+    "responses": {
+      "type": "object",
+      "description": "Assessment responses as key-value pairs"
+    },
+    "results": {
+      "type": "object",
+      "properties": {
+        "personality_traits": {
+          "type": "object",
+          "description": "Personality trait scores"
+        },
+        "aptitude_scores": {
+          "type": "object",
+          "description": "Aptitude scores by category"
+        },
+        "recommended_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Recommended career fields based on assessment"
+        },
+        "strengths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "areas_for_growth": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "completion_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date assessment was completed"
+    }
+  },
+  "required": [
+    "assessment_type"
+  ]
+}

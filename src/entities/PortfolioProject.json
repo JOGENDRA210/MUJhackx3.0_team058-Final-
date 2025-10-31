@@ -1,0 +1,92 @@
+{
+  "name": "PortfolioProject",
+  "type": "object",
+  "properties": {
+    "project_name": {
+      "type": "string",
+      "description": "Name of the portfolio project"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "target_career": {
+      "type": "string",
+      "description": "Career path this project supports"
+    },
+    "skills_demonstrated": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Skills showcased in this project"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "idea",
+        "planning",
+        "in_progress",
+        "completed",
+        "published"
+      ],
+      "default": "idea",
+      "description": "Current status"
+    },
+    "progress_percentage": {
+      "type": "number",
+      "default": 0,
+      "description": "Completion percentage"
+    },
+    "roadmap": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "completed": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "description": "Step-by-step roadmap"
+    },
+    "github_url": {
+      "type": "string",
+      "description": "GitHub repository link"
+    },
+    "live_demo_url": {
+      "type": "string",
+      "description": "Live project URL"
+    },
+    "technologies_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Technologies and tools used"
+    },
+    "impact_metrics": {
+      "type": "string",
+      "description": "Quantifiable results or impact"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "completion_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "project_name",
+    "target_career"
+  ]
+}
